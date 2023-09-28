@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height:160px;
+            width:300px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div>
+<h2>inch</h2>
+<input type="text" id="inch" onkeyup="func1(0)">
+<h2>cm</h2>
+<input type="text" id="cm" onkeyup="func1(1)">
+
+    </div>
+    <script>
+        function func1(a){
+            if(a==0){
+            let inch=document.getElementById('inch').value;
+            let cm=(inch*2.54);
+            document.getElementById("cm").value=cm;
+        }
+        else{
+            let cm=document.getElementById('cm').value;
+            let inch=(cm*0.3937);
+            document.getElementById('inch').value=inch;
+        }
+    }
+    </script>
+</body>
+</html>

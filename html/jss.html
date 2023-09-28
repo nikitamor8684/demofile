@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- DISPLAY IMAGES ON CLICK -->
+    <button onclick="document.getElementById('myimage').src='images/pic_bulboff.gif'">turn off the bulb</button>
+    <img id="myimage">
+    <button onclick="document.getElementById('myimage').src='images/pic_bulbon.gif'">turn on the bulb</button>
+    
+    <!-- DISPLAY CURRENT DATE -->
+    <button onclick="document.getElementById('demo').innerHTML=Date()">display</button>
+    <p id="demo"></p>
+
+    <input type="date" id="dd">
+    <button onclick="document.getElementById('dd')".innerHTML=input>display date and time</button>
+
+<!-- to add css property -->
+    <p id="p">this is a paragraph</p>
+<button onclick="document.getElementById('p').style.fontSize='35px'">click me 1</button>
+<button onclick="document.getElementById('p').style.color='red'">click me 2</button>
+<button onclick="document.getElementById('p').style.display='none'">click me 3</button>
+
+<!-- EXTERNAL JS -->
+<!-- <p id="hello"></p>
+<script src="myScript.js">
+
+</script> -->
+
+<!-- to give print command -->
+<button onclick="window.print()">print</button>
+
+<p id="demoo"></p>
+
+<script>
+    window.alert("hello");
+
+    console.log("hello");
+
+document.getElementById('demoo').innerHTML=typeof ""+"<br>"+typeof "john"+"<br>"+typeof 5;
+
+</script>
+</body>
+</html>

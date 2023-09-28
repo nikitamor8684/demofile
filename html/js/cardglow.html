@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:black;
+            align-content: center; 
+            justify-content: center;
+            display:flex;
+            height:100vh;
+        }
+        .container{
+            height:300px;
+            width:300px;
+        }
+        .box1{
+            display:flex;
+            height:300px;
+            width:300px;
+            background-color:#060c21;
+            color:white;
+            position:relative;
+            align-content:center;
+            justify-content:center;
+            padding:30px;
+            box-sizing: border-box;
+            top:-4px;
+            bottom:-4px;
+            right:-4px;
+            left:-4px;
+        }
+        .box1::before{
+            content:'';
+            z-index:-1;
+            animation-duration:10s;
+            position:absolute;
+            animation:example 2s ease 0s infinite normal;
+            top:-4px;
+            bottom:-4px;
+            right:-4px;
+            left:-4px;
+            background: linear-gradient(180deg, green, #060c21, #060c21, blue);
+
+        }
+        .box1::after{
+            position:absolute;
+            content:'';
+z-index:-2;
+position:absolute;
+animation:example 2s ease 0s infinite normal;
+background: linear-gradient(180deg, green, #060c21, #060c21, blue);
+
+        }
+@keyframes example{
+    0%{
+    background:linear-gradient(0deg, green, #060c21, #060c21, blue);
+    transform:rotate(180deg);
+    }
+    30%{
+        background:linear-gradient(90deg, green, #060c21, #060c21, blue);
+       
+    }
+
+    70%{
+        background:linear-gradient(180deg, green, #060c21, #060c21, blue);
+    transform:rotate(180deg);    
+    }
+    100%{
+        background:linear-gradient(320deg, green, #060c21, #060c21, blue);
+    }
+}
+   
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    <div class="box1">
+        <p><font size="4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, eaque. Ex dolorem animi eum nulla omnis saepe.
+        Exercitationem fugit dignissimos error fugiat ea ab, nihil, pariatur facilis laboriosam praesentium laudantium
+        debitis esse ipsam adipisci eligendi eaque tempore itaque velit consequatur.
+      </font>  </p>
+    </div>
+</div>
+</body>
+
+</html>

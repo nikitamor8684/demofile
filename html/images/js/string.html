@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p id="p"></p>
+        
+        <div id="div" heigth="200px" width="200px"></div> -->
+        <p id="p1">visit microsoft</p> 
+   <script>
+//     let text="amphibian";
+//     // let a=text.length;
+//     document.getElementById('p').innerHTML=text.length;
+
+//     let txt=`"we are so called "vikings" gj"`;
+//     document.getElementById('p').innerHTML=txt;
+
+//     let fruits="apple,mango,banana";
+//     document.getElementById('p').innerHTML=fruits.length;
+//     document.getElementById('p').innerHTML=fruits.slice(4,7);
+
+// function myfunction(){
+//    let text= document.getElementById('p1').innerHTML;
+//    document.getElementById('p1').innerHTML=text.replace("microsoft","w3school");
+// }
+
+
+
+
+function randomcolor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++ ) {
+            color += letters[Math.round(Math.random() * 15)];
+        }
+        document.getElementById('p1').style.background=color;
+    }
+   </script> 
+       <button onclick="randomcolor()">try it</button>
+</body>
+</html>

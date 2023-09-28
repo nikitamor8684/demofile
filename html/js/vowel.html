@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" onkeyup="func()" id="ab">
+    <!-- <input type="text" onkeyup="vowels()"> -->
+
+    <script>
+        // let ab="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        
+        function func(){
+   let b=[document.getElementById('ab').value];
+   
+        for( var i=0;i<b.length;i++){
+            if(b[i]=='a'||b[i]=='e'||b[i]=='i'||b[i]=='o'||b[i]=='u'||b[i]=='A'||b[i]=='E'||b[i]=='I'||b[i]=='O'||b[i]=='U'){
+                document.write("vowel");
+            }
+            else{
+                document.write("consonant");
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+// function vowels(s) {
+  
+//     for(i=0;i<s.length;i++){
+    
+    
+//         if (s[i] === 'a' || s[i] === 'e' || s[i] === 'i' || s[i] === 'o' || s[i] === 'u') {
+//             console.log('\n' + s[i]);
+//         }
+       
+//     }
+
+// }
+
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+*{
+    box-sizing: border-box;
+}
+
+
+
+.box1{
+    background-color:black;
+    color:red;
+    height:250px;
+    width:200px;
+    margin:10px;
+   float:left;
+   display:none;
+}
+
+button{
+    margin-left:60px;
+    background-color: green;
+}
+img{
+    margin-left:60px;
+    margin-top:8px;
+    border-radius: 100px;
+    border-width:2px;
+    border-style: solid;
+}
+
+    </style>
+    </head>
+    <body>
+        
+            <div class="box1">
+                <img src="logo1.jpg" height="80px" width="80px">
+                <h2 align="center">john</h2>
+                <p align="center">843094878092384</p>
+                <button>contact</button>
+            </div>
+
+            <div class="box1">
+                <img src="logo1.jpg" height="80px" width="80px">
+                <h2 align="center">doe</h2>
+                <p align="center">843094878092384</p>
+                <button>contact</button>
+            </div>
+
+            <div class="box1">
+                <img src="logo1.jpg" height="80px" width="80px">
+                <h2 align="center">aman</h2>
+                <p align="center">843094878092384</p>
+                <button>contact</button>
+            </div>
+
+            <div class="box1">
+                <img src="logo1.jpg" height="80px" width="80px">
+                <h2 align="center">nikita</h2>
+                <p align="center">843094878092384</p>
+                <button>contact</button>
+            </div>
+            
+            <div class="box1">
+                <img src="logo1.jpg" height="80px" width="80px">
+                <h2 align="center">rahul</h2>
+                <p align="center">843094878092384</p>
+                <button>contact</button>
+            </div>
+        
+        <script>
+            let ele=document.getElementsByClassName('box1');
+            
+            var j;
+            function func(){
+         j=parseInt(Math.random()*ele.length);
+        console.log(j);
+   ele[j].style.display="block";
+
+    }
+  
+
+        </script>
+        <button onclick="func()">next</button>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <marquee onmouseover="stop()" onmouseout="start()" >hello</marquee>
+  <marquee onmouseover="style='color:red;'" onmouseout="style='color:yellow;'">hello</marquee>
+
+  <h1 onclick="this.innerHTML='oops'">click on me</h1>
+  <h2 onclick="changeText(this)">click on me!</h2>
+
+  <button onclick="displayDate()">date</button>
+
+  <label for="name">enter your name</label>
+  <input type="text" id="name" onchange="uppercase()">
+
+<div onmouseover="thank(this)" onmouseout="over(this)" id="a">MOUSE OVER ME</div>
+
+<div onmousedown="mdown(this)" onmouseup="mup(this)" style="background-color:tomato;
+height:100px ;width:100px; padding:40px">click me</div>
+  <script>
+    function changeText(h2){
+        h2.innerHTML="oops!";
+    }
+
+    function displayDate(){
+        document.getElementById("demo").innerHTML=Date();
+    }
+
+    function uppercase(){
+        const x=document.getElementById('name');
+       x.value=x.value.toUpperCase(); 
+    }
+
+  function thank(A){
+A.innerHTML='thank you'
+  }
+
+  function over(A){
+    A.innerHTML='MOUSE OVER ME';
+  }
+
+  function mup(a){
+    a.style.background="green";
+    a.innerHTML="thank you";
+  }
+
+  function mdown(a){
+    a.style.background="blue";
+    a.innerHTML="release me";
+  }
+  </script>
+  <p id="demo"></p>
+</body>
+</html>

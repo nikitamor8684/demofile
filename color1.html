@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            position:relative;
+        }
+        div{
+            height:100px;
+            width:100px;
+            background-color: red;
+            
+            position:absolute;
+            
+           
+        transition: all 2s;
+        }
+
+    </style>
+</head>
+<body>
+<h1>press up arrow and down arrow for box movement</h1>
+        <div id="box">
+     
+
+        </div>
+        <script>
+ window.onkeydown = function(x){
+    let code=x.keyCode;
+    console.log(code);
+        if(code==38){
+         
+
+            document.getElementById('box').style.top="200"+"px";
+
+             
+            setTimeout(func,2000);
+        }
+    }
+        function func(){
+            document.getElementById('box').style.top="0"+"px";
+
+
+    }
+
+
+        </script>
+</body>
+</html>

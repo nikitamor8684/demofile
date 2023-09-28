@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #box{
+        width:500px;
+         heigth:500px;
+background-color: aliceblue;
+background-image: url(.../images/logo1.jpg);
+    }
+ 
+</style>
+<body>
+    <h1>ID CARD GENERATOR</h1>
+    <h3>input form</h3><br>
+   enter your name:<input type="text" id="name"><br><br>
+   enter college name:<input type="text" id="college"><br><br>
+   enter college location:<input type="text" id="location"><br><br>
+   <div id="box" style=" background-color:aliceblue,'height:500px ','width:500px'">
+
+   </div>
+   <script>
+function function1(){
+let ab=document.getElementById('name').value;
+let bc=document.getElementById('college').value;
+let cd=document.getElementById('location').value;
+document.getElementById('box').innerHTML="<h2>"+"name="+ab+"<br>"+"college name="+bc+"<br>"+"college location="
+    +cd+"</h2>";
+}
+   </script>
+   <input type="submit" value="generated card" onclick="function1()">
+</body>
+
+</html>

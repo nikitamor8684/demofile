@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            pading:0;
+            overflow: hidden;
+        }
+        .box{
+            height:100px;
+            width:100px;
+            border-radius:50%;position:absolute;
+            transition:all 2s;
+            display:none;
+            padding:40px;
+            box-sizing:border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="score">Score:0</h1>
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+    <div class="box">9</div>
+    <div class="box">10</div>
+
+    <script>
+        let score=0;
+let box=document.getElementsByClassName('box');
+let bdy=document.getElementsByTagName('body');
+let color=['red','green','blue','dodgerblue','yellow','yellowgreen','tomato','violet','purple','skyblue'];
+
+setInterval(()=>{
+    
+    var rand=Math.floor(Math.random()*box.length);
+var rand_top=Math.floor(Math.random()*innerHeight);
+var rand_bottom=Math.floor(Math.random()*innerHeight);
+var rand_left=Math.floor(Math.random()*innerWidth);
+var rand_right=Math.floor(Math.random()*innerWidth);
+box[rand].style.backgroundColor=color[Math.floor(Math.random()*color.length)];
+box[rand].style.top=rand_top+"px";
+box[rand].style.bottom=rand_bottom+"px";
+box[rand].style.left=rand_left+"px";
+box[rand].style.right=rand_right+"px";
+box[rand].style.display="block";
+},1000);
+Array.from(box).forEach((e,index) => {
+  e.addEventListener("click",()=>{
+box[index].style.display="none";
+score++;
+console.log(score);
+document.getElementById('score').innerHTML="Score :"+score;
+  })  
+});
+        </script>
+</body>
+</html>

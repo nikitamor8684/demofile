@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            display:none;
+            height: 200px;
+            width:200px;
+            background-color: black;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+       <!-- <img src="" alt="" id="image"> -->
+    </div>
+<script>
+    const arr=[
+        {
+            name:"nikita",
+            age:16,
+            mobile:8397983839,
+            image: "logo1.jpg"
+            
+        },
+        {
+            name:"nancy",
+            age:17,
+            mobile:873293701,
+            image: "logo1.jpg"
+        },
+        {
+            name:"payal",
+            age:18,
+            mobile:0965879085678,
+            image: "logo1.jpg"
+        },
+        {
+            name:"pooja",
+            age:19,
+            mobile:3287498237,
+            image: "logo1.jpg"
+        },
+    ];
+
+    // document.write(arr[0].name)
+    function random(){
+        let i=parseInt(Math.random()*arr.length);
+        document.getElementById('box').style.display="block";
+        document.getElementById('box').innerHTML="name:"+arr[i].name+"<br>"+
+        "age:"+arr[i].age+"<br>"+
+       "mobile:"+ arr[i].mobile+"<img src="+arr[i].image+">";
+    }
+    </script>
+    <button onclick="random()">next</button>
+</body>
+</html>

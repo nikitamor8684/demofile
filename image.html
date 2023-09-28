@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.img{
+    display: none;
+}
+    </style>
+</head>
+<body>
+    <img src="a.jpg" height="200px width=200px" class="img">
+    <img src="images/b.jpg" height="200px width=200px" class="img">
+    <img src="images/c.jpg" height="200px width=200px" class="img">
+    <img src="images/d.jpg" height="200px width=200px" class="img">
+    <img src="images/e.jpg" height="200px width=200px" class="img">
+    <img src="images/f.jpg" height="200px width=200px" class="img">
+
+    <button onclick="next()">next</button>
+    <button onclick="prev()">prev</button>
+
+   <script>
+ let ab=document.getElementsByClassName('img');
+ ab[0].style.display="block";
+//  let i=0;
+//  function next(){
+//    i++;
+//    ab[i].style.display="block";
+//      }
+
+// window.onkeydown=function(x){
+//     console.log(x.keycode);
+// }
+   </script> 
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="bdy">
+    <select id="value" onchange="func()">
+        <option>red</option>
+        <option>blue</option>
+    </select>
+    <script>
+        function func(){
+        let x=document.getElementById('value').value;
+        document.getElementById('bdy').style.background=x;
+        }
+    </script>
+</body>
+</html>

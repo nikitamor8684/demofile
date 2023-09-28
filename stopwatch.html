@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #hour{
+            display:none;
+        }
+        #minute{
+            display:none;
+        }
+        #second{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="time">
+        <div id="hour">00</div>
+        <div id="minute">00</div>
+        <div id="second">00</div>
+    </div>
+    <button id="start">start</button>
+    <button id="pause">pause</button>
+    <button id="reset">reset</button>
+<script>
+    let value;
+    let seconds=parseInt(document.getElementById('second').innerHTML);
+    let minutes=parseInt(document.getElementById('minute').innerHTML);
+    let hours=parseInt(document.getElementById('hour').innerHTML);
+    let time=document.getElementById('time');
+    seconds=00;
+        minutes=00;
+        hours=00;
+        time.innerHTML="<h1>"+hours+":"+minutes+":"+seconds+"</h1>";
+    document.getElementById('start').addEventListener('click',()=>{
+      value=  setInterval(display,1000);
+    })
+    document.getElementById('pause').addEventListener('click',()=>{
+        clearInterval(value);
+    })
+    document.getElementById('reset').addEventListener('click',()=>{
+        seconds=00;
+        minutes=00;
+        hours=00;
+    time.innerHTML="<h1>"+hours+":"+minutes+":"+seconds+"</h1>";
+    })
+ function display(){
+seconds++;    
+        if(seconds==60){
+            seconds=0;
+            minutes++;
+        }
+        if(minutes==60){
+            minutes=0;
+            hours++;
+        }
+        time.innerHTML="<h1>"+hours+":"+minutes+":"+seconds+"</h1>";
+    }
+</script>
+</body>
+</html>

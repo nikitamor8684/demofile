@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            overflow: hidden;
+            height:100vh;
+            width:100wh;
+        }
+     
+        .box{
+            border-radius: 50%;
+            border-width: 1px;
+            border-style:none;
+            position:absolute;
+            transition:all 1s;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div> <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div> <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div> <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div> <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div> <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div> <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div> <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</body>
+<script>
+    setInterval(function(){
+        let box=document.getElementsByClassName('box');
+        let bheight=parseInt(Math.random()*100);
+        let bwidth=parseInt(Math.random()*100);
+        let btop=parseInt(Math.random()*1200);
+        let bbottom=parseInt(Math.random()*1200);
+        let bright=parseInt(Math.random()*1200);
+        let bleft=parseInt(Math.random()*1200);
+        let arr=["red","green","bisque","azure","brown","beige","aqua","goldenrod","tomato"];
+        let color=parseInt(Math.random()*6);
+        let rbox=parseInt(Math.random()*box.length)
+ box[rbox].style.background=arr[color];
+        box[rbox].style.width=bwidth+"px";
+        box[rbox].style.height=bheight+"px";
+    box[rbox].style.left=bleft+"px";
+    box[rbox].style.right=bright+"px";
+    box[rbox].style.top=btop+"px";
+    box[rbox].style.bottom=bbottom+"px";
+    },20 )
+</script>
+</html>

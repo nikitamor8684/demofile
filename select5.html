@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="select" onchange="funct()">
+        <option id="haryana" >haryana</option>
+        <option id="goa"   >goa</option>
+        <option id="punjab"  >punjab</option>
+    </select>
+<select>
+    <option id="a">panipat</option>
+    <option id="b">sonipat</option>
+    <option id="c">jind</option>
+ 
+</select>
+    <script>
+        function funct(){  
+               
+                let select=[document.getElementById('select').value];
+                console.log(select);
+     document.getElementById("a").innerHTML="";
+     document.getElementById("b").innerHTML="";
+     document.getElementById("c").innerHTML="";
+     let h1=["panipat","sonipat","jind"];
+     let h2=["panaji","margoa","mapusa"];
+     let h3=["mohali","amritsar","ludhiana"]
+     for(i=0;i<h1.length;i++){
+     if (select[i]=='haryana'){
+            
+            document.getElementById('a').innerHTML+="<option>"+h1[0]+"</option>";
+            document.getElementById('b').innerHTML+="<option>"+h1[1]+"</option>";
+            document.getElementById('c').innerHTML+="<option>"+h1[2]+"</option>";
+
+            console.log(h1[i]);
+        }
+    }
+   
+    for(i=0;i<h2.length;i++){ 
+                    if (select[i]=='goa'){   
+            document.getElementById('a').innerHTML+="<option>"+h2[0]+"</option>"  ;
+            document.getElementById('b').innerHTML+="<option>"+h2[1]+"</option>"  ;
+            document.getElementById('c').innerHTML+="<option>"+h2[2]+"</option>"  ;
+
+            console.log(h2[i]);
+
+                        }
+                                }
+                     
+                                for(i=0;i<h3.length;i++){  
+                            if(select[i]=='punjab'){ 
+            document.getElementById('a').innerHTML+="<option>"+h3[0]+"</option>"            
+            document.getElementById('b').innerHTML+="<option>"+h3[1]+"</option>"            
+            document.getElementById('c').innerHTML+="<option>"+h3[2]+"</option>"            
+
+                            }
+                        }
+                        }
+                    
+                
+    </script>
+</body>
+</html>

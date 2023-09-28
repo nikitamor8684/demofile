@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="select" onchange="funct()">
+        <option id="haryana" >haryana</option>
+        <option id="goa"   >goa</option>
+        <option id="punjab"  >punjab</option>
+    </select>
+<select>
+    <option id="a">panipat</option>
+    <option id="b">sonipat</option>
+    <option id="c">jind</option>
+ 
+</select>
+    <script>
+        function funct(){  
+               
+                let select=[document.getElementById('select').value];
+                console.log(select);
+     document.getElementById("a").innerHTML="";
+     document.getElementById("b").innerHTML="";
+     document.getElementById("c").innerHTML="";
+     
+    for(i=0;i<select.length;i++){
+        if (select[i]=='haryana'){
+            
+                           document.getElementById("a").innerHTML="panipat";
+                           document.getElementById("b").innerHTML="sonipat";
+                           document.getElementById("c").innerHTML="jind";
+        }
+    // }
+                        // for(i=0;i<select.length;i++){
+                    if (select[i]=='goa'){    
+                                    document.getElementById("a").innerHTML="panaji";
+                                    document.getElementById("b").innerHTML="margoa";
+                                    document.getElementById("c").innerHTML="mapusa";
+                        
+                                }
+                            // }
+
+                        // for(i=0;i<select.length;i++){
+                            if(select[i]=='punjab'){ 
+                                document.getElementById("a").innerHTML="mohali";                    
+                                document.getElementById("b").innerHTML="amritsar";
+                               document.getElementById("c").innerHTML="ludhiana";
+                                
+                            }
+                        }
+                    }
+                
+    </script>
+</body>
+</html>

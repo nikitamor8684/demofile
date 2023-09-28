@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height:150px;
+            width:400px;
+            background-color:black;
+        box-sizing: border-box;
+         padding-top:50px;
+        }
+        .btn{
+            height:50px;
+            width:50px;
+            margin-left:17px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button class="btn" onclick="abc(0)">&#9733;</button>
+        <button class="btn"  onclick="abc(1)" >&#9733;</button>
+        <button class="btn"  onclick="abc(2)">&#9733;</button>
+        <button class="btn" onclick="abc(3)" >&#9733;</button>
+        <button class="btn"  onclick="abc(4)">&#9733;</button>
+
+        <!-- <button class="btn" >&#9733;</button>
+        <button class="btn"   >&#9733;</button>
+        <button class="btn"  >&#9733;</button>
+        <button class="btn" >&#9733;</button>
+        <button class="btn"  >&#9733;</button> -->
+
+    </div>
+    <script>
+  
+        let  star=document.getElementsByClassName('btn');
+        function abc(index){    
+          for(i=0;i<=star.length;i++){
+            for(j=0;j<=index;j++){
+             star[j].style.background="yellow";
+            }
+          }
+              for(i=0;i<=star.length;i++){
+                for(j=index+1;j<5;j++){
+             star[j].style.background="white";
+                }
+              }  
+}
+
+// let star=document.getElementsByClassName('btn');
+// Array.from(star).forEach((i,index)=>{
+//     // console.log(i);
+//     i.addEventListener("click",(y)=>{
+//     for(y=0;y<star.length;y++){
+//       button[y].style.background="white";
+//     }
+//     for(y=0;y<=index;y++){
+//         button[y].style.background="yellow";
+//     }
+// })
+// })
+
+// let star=document.getElementsByClassName('btn');
+// function abc(x){
+//     for(i=0;i<star.length;i++){
+//         for(j=0;j<star.length;j++){
+//          star[j].style.background="white";
+//             }
+//     for(j=0;j<=x;j++){
+//              star[j].style.background="yellow";
+//             }
+// }
+// }
+       
+        </script>
+</body>
+</html>

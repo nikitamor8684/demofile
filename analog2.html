@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div{
+            height: 510px;
+            width:510px;
+            background-color: white;
+        } */
+img{
+    margin:100px 400px;
+}
+#needle1{
+    background-color:black ;
+    height:220px;
+     width:5px;
+     position:absolute;
+     left:650px;
+     bottom:230px;
+     border-style:solid ;
+     border-color:black ;
+     border-radius:2px;
+border-width:1px ;
+transform-origin: bottom;
+}
+#needle2{
+    background-color:red ;
+    height:180px;
+     width:5px;
+     position:absolute;
+     left:650px;
+     bottom:230px;
+     border-style:solid ;
+     border-color:red ;
+     border-radius:2px;
+border-width:1px ;
+transform-origin: bottom;
+
+}
+#needle3{
+    background-color:blue ;
+    height:210px;
+     width:5px;
+     position:absolute;
+     left:650px;
+     bottom:225px;
+     border-style:solid ;
+     border-color:blue ;
+     border-radius:2px;
+border-width:1px ;
+transform-origin: bottom;
+animation-name:example;
+}
+    </style>
+</head>
+<body>
+    
+    <img src="clock.jpg" alt=""  height="500px" width="500px" >
+
+<div id="needle1"></div>
+<div id="needle2"></div>
+<div id="needle3"></div>
+
+<script>
+    setInterval (function(){
+       let needle1=document.getElementById('needle1');
+       let needle2=document.getElementById('needle2');
+       let needle3=document.getElementById('needle3');
+       let a=new Date();
+       let b=a.getHours();
+       let c=a.getMinutes();
+       let d=a.getSeconds();
+       
+       let hour=(b*30+60*0.5);
+       let minute=(c*6);
+       let seconds=(d*6);
+        // needle2.style.transform="rotate("+hour+"deg)";
+        // needle3.style.transform="rotate("+minute+"deg)";
+        // needle1.style.transform="rotate("+seconds+"deg)"; 
+
+        needle.style.animation="@keyframes example{"+"0%{"
+    },1000);
+
+
+    // setInterval(func(),1000);
+
+</script>
+</body>
+</html>

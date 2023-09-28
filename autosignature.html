@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:black;
+        }
+    </style>
+</head>
+<body>
+  <canvas id="canvas"></canvas>  
+  <button onclick="downloadCanvas();">Save</button>
+
+
+  <script>
+    const canvas=document.getElementById("canvas");
+    const ctx=canvas.getContext('2d');
+    canvas.width=window.innerWidth/2;
+    canvas.height=window.innerHeight/2;
+canvas.style.background="white";
+
+let mouseX=0;
+let mouseY=0;
+let isDrawing=false;
+canvas.addEventListener("mousedown",function(e){
+let isDrawing=true;
+ctx.beginPath();
+mouseX=e.clientX;
+mouseY=e.clientY;
+ctx.moveTo(mouseX,mouseY)
+
+})
+
+canvas.addEventListener("mousemove",function(e){
+if(isDrawing){
+    ctx.lineTo(e.clientX,e.clientY);
+    ctx.stroke();
+}
+})
+
+canvas.addEventListener("mouseup",function(e){
+isDrawing=false;
+})
+
+function downloadCanvas(){
+    var imageData=canvas.toDataURL("image/png");
+    let anchorTag=document.createElement("a");
+    document.body.appendChild(anchorTag);
+    anchorTag.href=imageData;
+    anchorTag.download="imageData";
+    anchorTag.click();
+    document.body.removeChild(anchorTag);
+}
+  </script>
+</body>
+</html>

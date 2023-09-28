@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+    color:black;
+    background-color: white;
+}
+.dark{
+    background-color: black;
+    color:white;
+}
+</style>
+<body >
+    <input type="submit" onclick="function3()" id="btn" value="day">
+    <p>this is a paragraph</p>
+    <h1>this is a heading</h1>
+    <h1>this is a heading</h1>
+    <h1>this is a heading</h1>
+    <h1>this is a heading</h1>
+
+  <script>
+    
+    function function3(){
+        var nm=document.body;
+        let btn=document.getElementById('btn');
+
+        // var nm=document.getElementsByClassName('white');
+        // nm[0].classList.toggle("dark");
+        nm.classList.toggle("dark");
+        var theme;
+        if(nm.classList.contains('dark')){
+            theme="dark";
+            btn.value="dark";
+            console.log(btn.value);
+
+        }
+        else{
+            theme="light";
+            btn.value="day";
+            console.log(btn.value);
+        }
+         localStorage.setItem("Pagetheme",JSON.stringify(theme));
+    }
+    let gettheme=JSON.parse(localStorage.getItem('Pagetheme'));
+    if(gettheme==="dark"){
+      document.body.classList="dark";
+    }
+  </script> 
+</body>
+</html>

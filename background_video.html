@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+overflow:hidden;
+        }
+        #box{
+            width:100%;
+        }
+        .imgbox{
+            width:100%;
+            position:absolute;
+            bottom:-50px;
+            display:flex;
+            justify-content: space-around;
+        }
+        .imgbox img{
+            height:110px;
+            width:200px;
+            border:5px solid white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+    <iframe width="300" height="150" id="video1" src="https://www.youtube.com/embed/eUzXNxvAsgg" 
+    title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen ></iframe>
+
+    <iframe width="300" height="150"  id="video2" src="https://www.youtube.com/embed/eUzXNxvAsgg" title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen ></iframe>
+
+    <iframe width="300" height="150"  id="video 3" src="https://www.youtube.com/embed/ISz1WY8zwBw" 
+    title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen ></iframe>
+</div>
+
+        <div class="imgbox">
+            <img src="background1.jpg" onclick="video(0)">
+            <img src="background2.jpg" onclick="video(1)">
+            <img src="background3.jpg" onclick="video(2)">
+
+        </div>
+</body>
+<!-- <script>
+    let ab=document.getElementById('video1');
+    let bc=document.getElementById('video1');
+    let cd=document.getElementById('video1');
+console.log(ab);
+function video(x){
+if(x==0){
+    ab.style.heigth='1000px';
+    ab.style.width='100%';
+
+}
+else if(x==1){
+    bc.style.heigth='1000px';
+    bc.style.width='100%'; 
+}
+else{
+    cd.style.heigth='1000px';
+    cd.style.width='100%';
+}
+}
+</script> -->
+<script>
+    function video(a){
+        var vbox=document.getElementById('box');
+        if(a==0){
+            box.src=  <iframe width="300" height="150" id="video1" src="https://www.youtube.com/embed/eUzXNxvAsgg" 
+    title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen ></iframe>
+        }
+       else if(a==1){
+            box.src="https://www.youtube.com/embed/eUzXNxvAsgg";
+        }
+        else{
+            box.src="https://www.youtube.com/embed/ISz1WY8zwBw";
+        }
+    }
+</script>
+</html>

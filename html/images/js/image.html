@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.img{
+    display: none;
+}
+    </style>
+</head>
+<body>
+    <img src="a.jpg" height="400px width=100%" class="img">
+    <img src="b.jpg" height="400px width=100%" class="img">
+    <img src="c.jpg" height="400px width=100%" class="img">
+    <img src="d.jpg" height="400px width=100%" class="img">
+    <img src="e.jpg" height="400px width=100%" class="img">
+    <img src="k.jpg" height="400px width=100%" class="img">
+
+    <button onclick="prev()">prev</button>
+    <button onclick="next()">next</button>
+
+   <script>
+ let ab=document.getElementsByClassName('img');
+ ab[0].style.display="block";
+ let i=0;
+//  for(k=0;k<ab.length;k++){
+//     ab[i].display="none";
+//  }
+ function next(){
+    ab[i].style.display="none";
+        i++;
+     if(i>ab.length-1){
+         i=0;
+        }
+        ab[i].style.display="block";
+
+
+    }
+
+function prev(){
+    ab[i].style.display="none";
+    i--;
+    if(i<0){
+        i=4;
+    }
+    ab[i].style.display="block";
+}
+
+   </script> 
+</body>
+</html>

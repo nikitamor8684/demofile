@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #p{
+            height:130px;
+            width:130px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <input type="number" onkeyup="func(this.value)">
+    <div id="p">
+        <img src="">
+    </div>
+    <p id="p1"></p>
+    <p id="p2"></p>
+
+    <script>
+        function func(a){
+            let ab=parseInt(Math.random()*10);
+            console.log(ab);
+            if(a>ab){
+                document.getElementById('p').innerHTML="<img src="+"sad.jpg"+">";
+                document.getElementById('p1').innerHTML="<h1>"+"think some small number"+"</h1>";
+                document.getElementById('p2').innerHTML="<h1>"+"right no. is="+ab+"</h1>";
+            }
+            if(a==ab){
+                document.getElementById('p').innerHTML="you are wright";
+                document.getElementById('p').innerHTML="<img src="+"happy.jpg"+">";
+            }
+            if(a<ab){
+                document.getElementById('p').innerHTML="think some large number";
+                document.getElementById('p').innerHTML="<img src="+"sad.jpg"+">";
+            }
+        }
+    </script>
+</body>
+</html>

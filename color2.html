@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="bdy">
+    <script>
+        window.onkeydown=function(x){
+console.log(x.keyCode);
+let color=x.keyCode;
+if(color==66){
+document.getElementById("bdy").style.background="blue";
+}
+if(color==82){
+document.getElementById("bdy").style.background="red";
+}
+if(color==71){
+document.getElementById("bdy").style.background="green";
+}
+// else{
+// document.getElementById("bdy").style.background="white";
+// }
+        }
+    </script>
+</body>
+</html>

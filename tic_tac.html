@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #box{
+        height:100vh;
+        width:100%;
+        background-color: red;
+        padding:0px 400px;
+        box-sizing: border-box;
+    }
+    #box1{
+        color:green;
+        background-color: black;
+        height:50px;
+        width:400px;
+        border-style:solid;
+        border-width:2px;
+        border-color:red;
+        border-radius: 10px;
+        box-sizing: border-box;
+        padding:7px 2px;
+    }
+    #play{
+        margin:0px 20px;
+    }
+    h3{
+        display: inline;
+    }
+    #box2{
+        
+        background-color: black;
+        width:380px;
+        height:380px;
+        margin:5px;
+        border-style:solid;
+        border-radius: 10px;
+        border-color: black;
+    }
+    .boxes{
+        height:100px;
+        width:100px;
+        background-color: white;
+        float:left;
+        margin:10px;
+        border-style:solid;
+        border-radius: 10px;
+        border-color: white;
+        font-size:80px;
+        padding-bottom:15px;
+        padding-left:20px;
+        box-sizing: border-box;
+    }
+    #p1{
+        display:flex;
+        background-color: red;
+    }
+</style>
+<body>
+    <div id="box">
+   <div id="box1">
+   <h3> <label for="playero">player o</label></h3>
+    <input type="radio" name="y" onclick="func(0)">
+    <input type="submit" value="play again" id="play" onclick="again()">
+  <h3>  <label for="playerx" >player x</label></h3>
+    <input type="radio" name="y" onclick="func(1)">
+   </div>
+   
+   <div id="box2">
+    <div class="boxes" id="boxes1"></div>
+    <div class="boxes"  id="boxes2"></div>
+    <div class="boxes"  id="boxes3"></div>
+    <div class="boxes"  id="boxes4"></div>
+    <div class="boxes"  id="boxes5"></div>
+    <div class="boxes"  id="boxes6"></div>
+    <div class="boxes"  id="boxes7"></div>
+    <div class="boxes"  id="boxes8"></div>
+    <div class="boxes"  id="boxes9"></div>
+
+   </div>
+   <h1 id="p"></h1>
+   <div id="p1"><img src=""></div>
+   <button onclick="submit()">submit</button>
+   </div>
+   <script>
+    function func(x){
+if(x==0){
+    let ab=document.getElementsByClassName('boxes');
+    Array.from(ab).forEach((y)=>{
+        
+        y.addEventListener("click",(z)=>{
+          z.target.innerHTML="o";  
+          
+        })
+    })
+}
+if(x==1){
+    let ab=document.getElementsByClassName('boxes');
+    Array.from(ab).forEach((y)=>{
+        // console.log(y);
+        y.addEventListener("click",(z)=>{
+          z.target.innerHTML="x";  
+          
+        })
+        
+    })
+}
+}
+function again(){
+    let ab= document.getElementsByClassName('boxes');
+    Array.from(ab).forEach((y)=>{
+        // console.log(y);
+      for(i=0;i<ab.length;i++){
+        ab[i].innerHTML="";
+      }         
+        })   
+}
+
+function submit(){
+let boxes1=document.getElementById('boxes1').innerHTML;
+console.log(boxes1);
+let boxes2=document.getElementById('boxes2').innerHTML;
+let boxes3=document.getElementById('boxes3').innerHTML;
+let boxes4=document.getElementById('boxes4').innerHTML;
+let boxes5=document.getElementById('boxes5').innerHTML;
+let boxes6=document.getElementById('boxes6').innerHTML;
+let boxes7=document.getElementById('boxes7').innerHTML;
+let boxes8=document.getElementById('boxes8').innerHTML;
+let boxes9=document.getElementById('boxes9').innerHTML;
+
+
+if(boxes1==boxes2&& boxes2==boxes3 && boxes3=='o'){
+   document.getElementById("p").innerHTML=("player o win");
+}
+ else if(boxes1==boxes2&& boxes2==boxes3 && boxes3=='x'){
+   document.getElementById("p").innerHTML=("player x win");
+}
+else if(boxes4==boxes5 && boxes5==boxes6 && boxes6=='o'){
+   document.getElementById("p").innerHTML=("player o win");
+}
+else if(boxes4==boxes5 && boxes5==boxes6 && boxes6=='x'){
+   document.getElementById("p").innerHTML=("player x win");
+}
+ else if(boxes7==boxes8 && boxes8==boxes9 && boxes9=='o'){
+   document.getElementById("p").innerHTML=("player o win");
+}
+else if(boxes7==boxes8 && boxes8==boxes9 && boxes9=='x'){
+   document.getElementById("p").innerHTML=("player x win");
+}
+ else if(boxes1==boxes4 && boxes4==boxes7 && boxes7=='o'){
+   document.getElementById("p").innerHTML=("player o win");
+}
+else if(boxes1==boxes4 && boxes4==boxes7 && boxes7=='x'){
+   document.getElementById("p").innerHTML=("player x win");
+}
+ else if(boxes2==boxes5 && boxes5==boxes8 && boxes8=='o'){
+   document.getElementById("p").innerHTML=("player o win");
+}
+else if(boxes1==boxes4 && boxes4==boxes7 && boxes7=='x'){
+   document.getElementById("p").innerHTML=("player x win");
+}
+ else if(boxes3===boxes6 && boxes6==boxes9 && boxes9=='o'){
+   document.getElementById("p").innerHTML=("player o win");
+}
+else if(boxes3===boxes6 && boxes6==boxes9 && boxes9=='x'){
+   document.getElementById("p").innerHTML=("player x win");
+}
+ else if(boxes1==boxes5 && boxes5==boxes9 && boxes9=='o'){
+   document.getElementById("p").innerHTML=("player o win");
+}
+else if(boxes1==boxes5 && boxes5==boxes9 && boxes9=='x'){
+   document.getElementById("p").innerHTML=("player x win");
+}
+ else if(boxes3==boxes5 && boxes5==boxes7 && boxes7=='o'){
+   document.getElementById("p").innerHTML=("player o win");
+}
+else if(boxes3==boxes5 && boxes5==boxes7 && boxes7=='x'){
+   document.getElementById("p").innerHTML=("player x win");
+}
+else{
+   document.getElementById("p").innerHTML=("you lost");
+}
+}
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #form{
+        display:none;
+    }
+   
+</style>
+<body>
+    enter your name:<input type="text" id="inp">
+    enter password<input type="password" id="pass">
+    <input type="submit" onclick="func()">
+    <p id="form">Submitted Form<br> Data<br>Your form is<br> received as </p> 
+  
+    <h4 id="div"></h4>
+    <script>
+        function func(){
+            let bc=document.getElementById('inp').value;
+            let ps=document.getElementById('pass').value;
+            if(bc!=""&&ps!=""){
+                let ab= document.getElementById('form').innerHTML;
+                document.write("<h1>"+ab+"</h1>");
+                
+                document.write("<h2>"+"name="+bc+"</h2>")
+                document.write("<h2>"+"password="+ps+"</h2>")
+            
+            }
+            if(bc==""){
+                document.getElementById('div').innerHTML="can't be blank";
+            }
+        }
+        </script>
+</body>
+</html>

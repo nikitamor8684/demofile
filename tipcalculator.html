@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height:500px;
+            width:350px;
+            background-color: blue;
+            margin:100px 400px;
+        }
+        h2{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div>
+<h2>AMOUNT</h2><input type="text" id="amount" onkeyup="func()">
+<h2>GST(8%)</h2><input type="text" id="gst">
+<h2>TOTAL</h2><input type="text" id="total">
+<h2>RATE(5%)</h2><input type="text" id="rate">
+<h2>GRAND TOTAL</h2><input type="text" id="grand">
+    </div>
+    <script>
+        function func(){
+            let amount=parseInt(document.getElementById('amount').value);
+            let gst=parseInt(amount*(8/100));
+            console.log(gst);
+            document.getElementById('gst').value=gst;
+            let total=parseInt(gst+amount);
+            console.log(total)
+            document.getElementById('total').value=total;
+            let rate=parseInt(amount*(5/100));
+            document.getElementById('rate').value=rate;
+            let grand=parseInt(rate+total);
+            document.getElementById('grand').value=grand;
+        }
+    </script>
+</body>
+</html>

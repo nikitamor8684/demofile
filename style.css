@@ -1,0 +1,15 @@
+
+.flex-container{
+    /* display:flex; */
+    background-color: whitesmoke;
+    height:1700px;
+    width:100%;
+}
+select{
+    display:inline-block;
+    padding:5px 150px;
+}
+input{
+    display:inline-block;
+    padding:5px 150px;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>message you would like to send</h2>
+        <p id="msssg"></p>
+        <input type="text" placeholder="enter message" id="send">
+        <button onclick="func1()">send message</button>
+    </div>
+    <script>
+        function func(){
+let ab=document.getElementById('send').value;
+// document.getElementById('mssg').innerHTML=ab;
+return ab;
+        }
+        function func1(){
+            func();
+let bc=document.write(func());
+document.getElementById('mssg').innerHTML=bc;
+        }
+    </script>
+</body>
+</html>

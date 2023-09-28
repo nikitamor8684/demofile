@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input" onkeyup="search()">
+    <table border="1" cellspacing="0" width="50%" id="content">
+<tr >
+  <th  >  Name </th>
+  <th >  Class </th>
+  <th >  Roll no. </th>
+  <th >  Marks </th>
+</tr>
+<tr class="name">
+    <td class="data">nikita</td>
+    <td class="data">bsc</td>
+    <td class="data">8</td>
+    <td class="data">80</td>
+</tr>
+<tr class="name">
+    <td class="data">nancy</td>
+    <td class="data">bsc</td>
+    <td class="data">9</td>
+    <td class="data">81</td>
+</tr>
+<tr class="name">
+    <td class="data">payal</td>
+    <td class="data">bsc</td>
+    <td class="data" >10</td>
+    <td class="data">82</td>
+</tr>
+<tr class="name">
+    <td class="data">tamanna</td>
+    <td class="data">bsc</td>
+    <td class="data">11</td>
+    <td class="data">84</td>
+</tr>
+<tr class="name">
+    <td class="data">tannu</td>
+    <td class="data">bsc</td>
+    <td class="data">10</td>
+    <td class="data">85</td>
+</tr>
+<tr class="name">
+    <td class="data">neha</td>
+    <td class="data">bsc</td>
+    <td class="data">15</td>
+    <td class="data">86</td>
+</tr>
+<tr class="name">
+    <td class="data">komal</td>
+    <td class="data">bsc</td>
+    <td class="data">17</td>
+    <td class="data">88</td>
+</tr>
+<tr class="name">
+    <td class="data">nikita</td>
+    <td >bsc</td>
+    <td >8</td>
+    <td >80</td>
+</tr>
+<tr class="name">
+    <td class="data">pooja</td>
+    <td class="data">bsc</td>
+    <td >18</td>
+    <td >88</td>
+</tr>
+<tr class="name">
+    <td class="data">kajal</td>
+    <td class="data">bsc</td>
+    <td class="data">19</td>
+    <td class="data">88</td>
+</tr>
+<tr class="name">
+    <td class="data">nidhi</td>
+    <td class="data">bsc</td>
+    <td class="data">17</td>
+    <td class="data">88</td>
+</tr>
+<tr class="name">
+    <td class="data">neeraj</td>
+    <td class="data">bsc</td>
+    <td class="data">8</td>
+    <td class="data">80</td>
+</tr>
+<tr class="name">
+    <td class="data">aman</td>
+    <td class="data">bsc</td>
+    <td class="data">8</td>
+    <td class="data">80</td>
+</tr>
+    </table>
+    <script>
+ 
+
+function search(){
+    let input=document.getElementById('input').value;
+    let table=document.getElementById('content');
+let name=document.getElementsByClassName('name');
+for(i=0;i<name.length;i++){
+var data=name[i].getElementsByClassName("data")[0].innerHTML;
+console.log(data);
+if(input==data){  
+name[i].innerHTML=data;
+name[i].style.display="block";
+name[i].style.background="red";
+}
+ else if(input!=data){
+  name[i].style.display="none";
+}
+else{
+    name[i].style.display="";
+}
+}
+}
+    </script>
+ 
+</body>
+</html>

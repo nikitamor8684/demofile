@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            height:100vh;
+            width:100vw;
+            background-color: black;
+        }
+        img{
+            animation-name: example;
+            animation-duration: 4s;
+            position:relative;
+        }
+        .jump{
+            animation-name: example;
+            animation-duration: 4s;
+        }
+        @keyframes example {
+            0% { left:0px; top:0px;}
+  25%  { left:200px; top:0px;}
+  50%  { left:200px; top:200px;}
+  75%  { left:0px; top:200px;}
+  100%   { left:0px; top:0px;}
+}
+    </style>
+</head>
+<body>
+    <div id="box">
+    <img src="dg.png" style="margin-left:250px;margin-left:250px;height:100px" id="img" class="">
+    <!-- <marquee  direction="right" scrollamount="100" style="margin: 0px 300px;"><div style="height:100px;width:100px;background-color: red;margin: 300px 300px 0px 300px;"></div></marquee> -->
+   <marquee  direction="left" scrollamount="100" style="margin: 0px 300px;"><hr style="width:700px; height:1px; background-color: white;margin:0px 300px;" id="hr"></marquee> 
+</div>
+</div>
+<script>
+    // var rand_left=Math.floor(Math.random()*innerWidth);
+    let img=document.getElementById('img');
+// img.style.left=+"px";
+let hr=document.getElementById('hr');
+window.onkeydown=(x)=>{
+    let code=x.keyCode;
+    if(code==38){
+     img.classList.add['jump'];   
+    }
+}
+</script>
+</body>
+</html>

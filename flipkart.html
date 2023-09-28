@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin:0;
+        }
+        #nav1{
+            width:100%;
+            background-color: blue;
+        }
+        #flip{
+            color:white;
+            display: inline-block;
+            margin-left:40px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+        }
+        #login{
+            display:inline-block;
+            background-color:white;
+            color:blue;
+            font-family:Arial, Helvetica, sans-serif;
+            padding:5px 30px;
+            margin:5px 15px;
+        }
+        #search{
+            display: inline-block;
+            padding:5px 120px;
+        }
+        .nav{
+            display:inline-block ;
+            color:white;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+            margin:2px 15px;
+            
+        }
+        .dropdown{
+            position: relative;
+            color:white;
+            display: inline-block;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+            margin:2px 20px;
+        }
+        .dropdown-content{
+            height:100px;
+            width:200px;
+            background-color: whitesmoke;
+            color:black;
+            display:none;
+            position: absolute;
+            z-index: 1;
+        }
+        .dropdown:hover .dropdown-content{
+            display:block;
+        }
+        .nav1{
+        width:100%;
+            background-color: white;
+        }
+   #box1{
+    background-color: whitesmoke;
+    height:700px;
+    width:100%;
+   }
+   #box2{
+    width:100px;
+    background-color:whitesmoke;
+    float:left;
+    position:sticky;
+    top:2px;
+   }
+    #box3{
+        height:500px;
+        width:400px;
+        background-color: whitesmoke;
+        float:left;
+        position:sticky;
+    top:2px;
+    }
+#box4{
+    height:500px;
+    width:60%;
+    background-color:whitesmoke;
+    float:left;
+    box-sizing: border-box;
+    padding:10px;
+}
+#button{
+    border-style:none;
+    border-radius:15px;
+    border-width:1px;
+    background-color: green;
+}
+   
+    </style>
+</head>
+<body>
+    <nav id="nav1">
+       <h2 id="flip">Flipkart</h2>
+       <input type="text" id="search" placeholder="Search for products,brands and more">
+       <input type="submit" value="Login" id="login">
+       <a href="#" class="nav">Become a seller</a>
+       <span="#" class="dropdown">More</span>
+       <div class="dropdown-content">
+        <p>Notifications prfeerences</p><br><hr>
+        <p>24x7 coustomer care</p><br><hr>
+        <p>Advertise</p><br><hr>
+        <p>download app</p>
+       </div>
+       <a href="#" class="nav">Cart</a>
+
+    </nav>
+
+<div id="box1">
+    <div id="box2">
+        <img src="watch1.jpg" height="100px" width="100px" id="img1" onmouseover="image(0)">
+        <img src="watch2.jpg" height="100px" width="100px"  id="img2"onmouseover="image(1)">
+        <img src="watch3.jpg" height="100px" width="100px" id="img3" onmouseover="image(2)">
+        <img src="box.jpg" height="100px" width="100px" id="img4" onmouseover="image(3)">
+
+    </div>
+    <div id="box3">
+<img src="watch1.jpg" height="500px" width="400px">
+    </div>
+    <div id="box4">
+<p>
+    F-TC901 Multi-Function Automatic Waterproof Transparent Sports Digital Watch For Boys Digital<br>
+     Watch - For Men
+</p>
+<p style="color:green;">Special prize</p><br>
+<b> <font size="6" > &#8377;248 </font></b>
+<b style="text-decoration:line-through"> &#8377;2499 </b>
+<b style="color:green"> 90% off </b><br>
+<button id="button">3.8 &#9733;</button>
+<b>2,796 ratings and 128 reviews 
+    <img src="image.jpg" height="20px" width="80px"><br><br>
+    <p>Avaliable offers</p><br><br>
+    <p>
+   <img src="heading.jpg" height="20px" width="20px">     
+Special PriceGet extra 20% off (price inclusive of cashback/coupon)T&C<br>
+<img src="heading.jpg" height="20px" width="20px">     
+Bank Offer10% off on Kotak Bank Credit Cards and Credit EMI Trxns, up to ₹1,000. On orders of ₹5,000 and aboveT&C
+<br>
+<img src="heading.jpg" height="20px" width="20px">     
+Bank OfferFlat ₹25 Instant Cashback on Paytm UPI. Min Order Value ₹250. Valid once per Paytm accountT&C
+<br>
+   <img src="heading.jpg" height="20px" width="20px">     
+Bank Offer5% Cashback on Flipkart Axis Bank CardT&C
+    </p>
+</b>
+    </div>
+</div>
+  <script>
+function image(x){
+    let ab=document.getElementById("box3");
+    console.log(ab);
+    if(x==0){
+ab.innerHTML="";
+ab.innerHTML="<img src="+"watch1.jpg"+" height='500px' width='400px'>"
+    }
+    if(x==1){
+ab.innerHTML="";
+ab.innerHTML="<img src="+"watch2.jpg"+" height='500px' width='400px'>"
+    }
+    if(x==2){
+ab.innerHTML="";
+ab.innerHTML="<img src="+"watch3.jpg"+" height='500px' width='400px'>"
+    }
+    if(x==3){
+ab.innerHTML="";
+ab.innerHTML="<img src="+"box.jpg"+" height='500px' width='400px'>"
+    }
+}
+  </script>
+</body>
+</html>

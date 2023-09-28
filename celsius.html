@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:300px;
+            height:200px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div>
+<h2>CELSIUS</h2>
+<input type="text" onkeyup="func1(0)" id="celsius">
+<h2>FARENHEIGHT</h2>
+<input type="text" onkeyup="func1(1)" id="farenheight">
+    </div>
+    <script>
+function func1(a){
+    if(a==0){
+    let celsius=document.getElementById('celsius').value;
+    let farenheight=(9/5)*celsius+32;
+    console.log(farenheight)
+    document.getElementById('farenheight').value=farenheight;
+}
+else{
+    let farenheight=document.getElementById('farenheight').value;
+    let celsius=(5/9)*(farenheight-32);
+    document.getElementById('celsius').value=celsius;
+}
+}
+    </script>
+</body>
+</html>

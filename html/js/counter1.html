@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="h">0</h2>
+    <button onclick="add()">add</button> 
+    <button onclick="sub()">sub</button> 
+
+   <script>
+ function add(){
+  let val= parseInt(document.getElementById('h').innerHTML);
+    val++;
+    if(val>4){
+        val=0;
+    }
+ 
+  document.getElementById('h').innerHTML=val;
+}
+ 
+ function sub(){
+    let val=parseInt(document.getElementById('h').innerHTML);
+ val--;
+    if(val<0){
+        val=4;
+    }
+    document.getElementById('h').innerHTML=val;
+ }
+   </script> 
+</body>
+</html>

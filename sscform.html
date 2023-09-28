@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+ <!-- <style src="style.css"></style> -->
+</head>
+<body>
+    <div class="flex-container">
+        <div>
+        Do you have Aadhar<b style="color:red">*</b>:
+        <input type="radio" name="y" onclick="func(0)">
+        <label for="yes">yes</label>
+        <input type="radio" name="y" onclick="func(1)">
+        <label for="no">no</label>
+        <br>
+        <br>
+        1a.Aadhar no. 
+        <input type="text" class="aadhar" id="aadhar1" >
+<br>
+<br>
+        1b.Verify Aadhar no.
+        <input type="text" class="aadhar" id="aadhar2" onkeyup="aadhar()" >
+<br>
+<p id="p" style="color:red"></p>
+<br>
+        1c. Type of ID<b style="color:red">*</b>
+        <select class="id">
+            <option>--select--</option>
+            <option>driving license</option>
+            <option>employer card</option>
+            <option>PAN card</option>
+            <option>Passport</option>
+            <option>school/college id card</option>
+            <option>voter id card</option>
+        </select>
+        <br>
+        <br>
+        1d.ID no.<b style="color:red">*</b>
+        <input type="text" class="id" >
+        </div>
+        <br><br>
+        <div>
+
+            2a.Name<b style="color:red">*</b>   <input type="text" id="name1" ><br><br>
+            2b. verify Name<b style="color:red">*</b>   <input type="text" id="name2"  onkeyup="verify()"><br>
+            <p id="p1" style="color:red"></p>
+<br><br>
+            2c.Have you changed name
+            <input type="radio" name="n" onclick="func1(0)">
+            <label for="yes">yes</label>
+            <input type="radio" name="n" onclick="func1(1)">
+            <label for="no">no</label><br><br>
+            2d.New name/Changed name<input type="text" id="name3" >
+<br><br>
+        </div>
+
+        <div>
+            3a.Father's name <b style="color:red">*</b><input type="text" id="father1" ><br><br>
+            3b.verify Father's name<b style="color:red">*</b> <input type="text" id="father2" onkeyup="verify1()" ><br>
+            <p id="p2" style="color:red"></p>
+
+            4a.Mother's's name<b style="color:red">*</b> <input type="text" id="mother1"><br><br>
+            4b.verify Mother's name<b style="color:red">*</b> <input type="text" id="mother2" onkeydown="verify2()"><br>
+            <p id="p3" style="color:red"></p>
+            <br><br>
+        </div>
+
+        <div>
+            5a.Date of Birth(DD/MM/YY)<b style="color:red">*</b><input type="date" id="date1"><br><br>
+            5b.Verify Date of Birth(DD/MM/YY)<b style="color:red">*</b><input type="date" id="date2" onclick="verify3()"><br>
+            <p id="p4" style="color:red"></p><br>
+        </div>
+
+        <div>
+            6.Matriculation (10th class) Examination Details:<br>
+            (i)Education Board<b style="color:red">*</b><select id="board1">
+                <option>--select--</option>
+                <option>central board of secondary education</option>
+                <option>national institute of open schooling</option>
+                <option>haryana board of school education</option>
+                <option>chattisgarh state open school</option>
+                <option>board of secondary education,rajasthan</option>
+                <option>board of secondary education,odisha</option>
+            </select><br><br>
+            (ii)Verify Education Board<b style="color:red">*</b>    <select id="board2" onchange="verify4()">
+                <option>--select--</option>
+                <option>central board of secondary education</option>
+                <option>national institute of open schooling</option>
+                <option>haryana board of school education</option>
+                <option>chattisgarh state open school</option>
+                <option>board of secondary education,rajasthan</option>
+                <option>board of secondary education,odisha</option>
+            </select><br>
+            <p id="p5" style="color:red"></p><br>
+
+            (iii)Roll no.<b style="color:red">*</b> <input type="text" id="roll1"><br><br>
+            (iv)Verify Roll no.<b style="color:red">*</b> <input type="text" id="roll2" onkeyup="verify5()"><br>
+            <p id="p6" style="color:red"></p><br><br>
+
+            (v)Year of Passing<b style="color:red">*</b> <select id="year1">
+                <option>2010</option>
+                <option>2011</option>
+                <option>2012</option>
+                <option>2013</option>
+                <option>2014</option>
+                <option>2015</option>
+                <option>2016</option>
+                <option>2017</option>
+                <option>2018</option>
+                <option>2019</option>
+                <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>
+            </select><br><br>
+            
+            (v) Verify Year of Passing<b style="color:red">*</b> <select id="year2" onchange="verify6()">
+                <option>2010</option>
+                <option>2011</option>
+                <option>2012</option>
+                <option>2013</option>
+                <option>2014</option>
+                <option>2015</option>
+                <option>2016</option>
+                <option>2017</option>
+                <option>2018</option>
+                <option>2019</option>
+                <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>
+            </select><br>
+<p id="p7" style="color:red"></p>
+        </div>
+
+        <div>
+            7a.Gender<b style="color:red">*</b><input type="radio" id="gender1" name="g">
+            <label for="Male">Male</label>
+          <input type="radio" id="gender2" name="g">
+          <label for="Female">Female</label>
+             <input type="radio" id="gender3" name="g">
+             <label for="Transgender">Transgender</label><br><br>
+             
+             7b.Verify Gender<b style="color:red">*</b><input type="radio" id="gender4" name="b" onclick="verify7()">
+             <label for="Male">Male</label>
+             <input type="radio" id="gender5" name="b" onclick="verify8()">
+             <label for="Female">Female</label>
+             <input type="radio" id="gender6" name="b" onclick="verify9()">
+             <label for="Transgender">Transgender</label><br>
+             <p id="p8" style="color:red"></p>
+        </div>
+
+        <div>
+            8a.Level of Educational Qualification<b style="color:red">*</b><select>
+                <option>--select--</option>
+                <option>matriculation</option>
+                <option>secondary</option>
+                <option>diplomo</option>
+                <option>graduation</option>
+                <option>post graduation</option>
+                <option> phd</option>
+            </select>
+        </div>
+        <br><br>
+        <div>
+            9a.Mobile Number<b style="color:red">*</b><input type="text" id="mobile1"><br><br>
+            9b.Verify Mobile Number<b style="color:red">*</b><input type="text"  id=mobile2 onkeyup="verify10()"><br>
+            <p id="p9" style="color:red"></p>
+        </div>
+        <br><br>
+
+        <div>
+            9a.Email ID<b style="color:red">*</b><input type="text" id="email1"><br><br>
+            9b.Verify Email ID<b style="color:red">*</b><input type="text"  id=email2 onkeyup="verify11()"><br>
+            <p id="p10" style="color:red"></p>
+        </div>
+        <br><br>
+        <div>
+            <ul>
+            <li>State/UT of permanenet address<b style="color:red">*</b>
+            <select>
+                <option>--select--</option>
+                <option>haryana</option>
+                <option>goa</option>
+                <option>punjab</option>
+                <option>karnatka</option>
+                <option>andhra pardesh</option>
+                <option>manipur</option>
+
+            </select>
+            </li>
+            </ul>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
