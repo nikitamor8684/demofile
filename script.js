@@ -1,7 +1,4 @@
-
-    
-    
-    function func(a){
+   function func(a){
         let bc= document.getElementsByClassName('aadhar');
     let ab= document.getElementsByClassName('id');
         if(a==0){
